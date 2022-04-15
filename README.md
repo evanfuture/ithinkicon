@@ -1,5 +1,7 @@
 # I Think Icon
 
+## eg. "I think I can, I think I can" 🚋
+
 I finally moved my side project's icon system into a standalone lib today, and thought I would share it with you all.
 
 The setup I use, which I really like, is a single svg added to the html body, and each icon is defined in that svg's defs as a symbol. Then, whenever I want to use an icon, I can just do something like `<svg class="h-3 w-3"><use xlink:href="#dm-moon"></use></svg>`.
