@@ -4,7 +4,8 @@
 
 I finally moved my side project's icon system into a standalone lib today, and thought I would share it with you all.
 
-The setup I use, which I really like, is a single svg added to the html body, and each icon is defined in that svg's defs as a symbol. Then, whenever I want to use an icon, I can just do something like `<svg class="h-3 w-3"><use xlink:href="#dm-moon"></use></svg>`.
+The setup I use, which I really like, is a single svg added to the html body, and each icon is defined in that svg's defs as a symbol. Then, whenever I want to use an icon, I can just do something like:
+`<svg class="h-3 w-3"><use xlink:href="#dm-moon"></use></svg>`.
 
 What bothered me about it was that there was no type safety around the icon names. So, if I misspelled "moon", it wouldn't work. So, I made an Angular Module that will automatically add the root level svg just the once, and then lets me use `<dm-icon class="h-3 w-3" icon="moon"></dm-icon>` for the icon, and the icon input is correctly typed with what's available.
 
