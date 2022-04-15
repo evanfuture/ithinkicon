@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "ithinkicon": "libs/ithinkicon",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

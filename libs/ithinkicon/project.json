@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/ithinkicon",
+  "sourceRoot": "libs/ithinkicon/src",
+  "prefix": "ithinkicon",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ithinkicon"],
+      "options": {
+        "jestConfig": "libs/ithinkicon/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ithinkicon/src/**/*.ts",
+          "libs/ithinkicon/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

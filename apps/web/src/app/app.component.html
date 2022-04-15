@@ -1,1 +1,48 @@
-<ithinkicon-nx-welcome></ithinkicon-nx-welcome>
+<div class="container mx-auto space-y-12 flex flex-col">
+  <h1 class="text-2xl">I Think Icon Examples</h1>
+
+  <div class="grid grid-cols-6 gap-x-2 gap-y-6">
+    <h2>Basic Use</h2>
+    <div class="col-span-5 flex flex-col space-y-4">
+      <code class="bg-slate-200 text-slate-800 max-w-fit rounded-sm px-6 py-4">
+        {{ '\<iti-icon class="w-5 h-5" icon="moon">\</iti-icon>'}}
+      </code>
+      <div class="flex space-x-5 items-center">
+        <span>Result:</span>
+        <iti-icon class="w-5 h-5" icon="moon"></iti-icon>
+      </div>
+    </div>
+
+    <h2>Control over colors</h2>
+    <div class="col-span-5 flex flex-col space-y-4">
+      <code class="bg-slate-200 text-slate-800 max-w-fit rounded-sm px-6 py-4">
+        {{ '\<iti-icon class="bg-white text-red-500" icon="upload">\</iti-icon>'
+        }}
+      </code>
+      <div class="flex space-x-5 items-center">
+        <span>Result:</span>
+        <iti-icon
+          class="bg-white text-red-500 w-6 h-6"
+          icon="upload"
+        ></iti-icon>
+      </div>
+    </div>
+
+    <h2>Any of them</h2>
+    <div class="flex flex-col space-y-4">
+      <div
+        *ngFor="let icon of availableIcons"
+        class="flex space-x-3 items-center"
+      >
+        <span class="uppercase text-xs">{{ icon }}: </span>
+        <iti-icon class="w-5 h-5" [icon]="icon"></iti-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-sm">
+    The icons used here come from
+    <a class="underline" href="https://heroicons.com/">https://heroicons.com</a
+    >, and I love them.
+  </div>
+</div>
